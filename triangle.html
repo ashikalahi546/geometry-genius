@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.6.3/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header class="m-10">
+      <div class="flex">
+        <div class="flex-1 grid grid-cols-3 gap-10">
+          <!-- card  Triangle  -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="images/triangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center">Triangle!</h2>
+              <p class="text-center">Area (A) = 0.5 X b X h</p>
+
+              <div class="flex items-center justify-center gap-3 my-2.5">
+                <input
+                  id="triangle-base"
+                  class="w-24 p-2 rounded-md outline-none"
+                  type="text"
+                  placeholder="b"
+                />
+                <span>cm</span>
+                <input
+                  id="triangle-height"
+                  class="w-24 p-2 rounded-md outline-none"
+                  type="text"
+                  placeholder="h"
+                />
+                <span>cm</span>
+              </div>
+              <div class="py-2">
+                <p>
+                  Area: <span id="triangle-area"></span> <span>cm</span>
+                  <sup>2</sup>
+                </p>
+              </div>
+              <div class="card-actions">
+                <button onclick="clickMe()" class="btn btn-primary w-full">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- card Rectangle -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="images/rectangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center">Rectangle!</h2>
+              <p class="text-center">Area (A) = w X I</p>
+
+              <div class="flex items-center justify-center gap-3 my-2.5">
+                <input
+                  id="rectangle-base"
+                  class="w-24 p-2 rounded-md outline-none"
+                  type="text"
+                  placeholder="width"
+                />
+                <span>cm</span>
+                <input
+                  id="rectangle-area"
+                  class="w-24 p-2 rounded-md outline-none"
+                  type="text"
+                  placeholder="length"
+                />
+                <span>cm</span>
+              </div>
+
+              <div>
+                <p>
+                  Area: <span id="rectangle-span"></span> <span>cm</span>
+                  <sup>2</sup>
+                </p>
+              </div>
+
+              <div class="card-actions">
+                <button onclick="rectangle()" class="btn btn-primary w-full">
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <!-- Parallelogram card -->
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="images/parallelogram.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center">Parallelogram!</h2>
+              <p class="text-center">Area (A) = b X h</p>
+
+              <div class="flex items-center justify-center gap-3 my-2.5">
+                <input
+                  id="parallelogram-base"
+                  class="w-24 p-2 rounded-md outline-none"
+                  type="text"
+                  placeholder="base"
+                />
+                <span>cm</span>
+                <input
+                  id="parallelogram-height"
+                  class="w-24 p-2 rounded-md outline-none"
+                  type="text"
+                  placeholder="height"
+                />
+                <span>cm</span>
+              </div>
+              <div>
+                <p>
+                  Area: <span id="parallelogram-area"></span> <span>cm</span>
+                  <sup>2</sup>
+                </p>
+              </div>
+              <div class="card-actions">
+                <button
+                  onclick="calculateParallelogramArea()"
+                  class="btn btn-primary w-full"
+                >
+                  Calculate
+                </button>
+              </div>
+            </div>
+          </div>
+          <div class="card w-96 bg-base-100 shadow-xl">
+            <figure>
+              <img src="images/triangle.png" alt="Shoes" />
+            </figure>
+            <div class="card-body">
+              <h2 class="text-center">Triangle!</h2>
+              <p class="text-center">Area (A) = 0.5 X b X h</p>
+
+              <div class="flex items-center justify-center gap-3 my-2.5">
+                <input
+                  class="w-24 p-2 rounded-md outline-none"
+                  type="text"
+                  placeholder="b"
+                />
+                <span>cm</span>
+                <input class="w-24 p-2 rounded-md outline-none" type="text" />
+                <span>cm</span>
+              </div>
+              <div class="card-actions">
+                <button class="btn btn-primary w-full">Calculate</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="w-96 border-2 border-gray-500 rounded-lg">
+          <h2 class="text-center p-2">Area Calculation</h2>
+        </div>
+      </div>
+    </header>
+
+    <script src="scripts/triangle.js"></script>
+    <script src="scripts/rectangle.js"></script>
+    <script src="scripts/parallelogram.js"></script>
+  </body>
+</html>
